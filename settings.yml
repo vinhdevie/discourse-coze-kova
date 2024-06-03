@@ -2,3 +2,5 @@ coze_bot_id:
   default: ''
 coze_bot_title:
   default: 'KOVA Innovative Assistant'
+coze_bot_icon:
+  default: ''
