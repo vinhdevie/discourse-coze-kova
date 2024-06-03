@@ -14,11 +14,11 @@
     function initializeCozeChat() {
       new CozeWebSDK.WebChatClient({
         config: {
-          bot_id: '7374723509647409159',
+          bot_id: settings.coze_bot_id,
         },
         componentProps: {
-          title: 'KOVA Innovative Assistant',
-          lang: 'vi',
+          title: settings.coze_bot_title,
+          lang: 'vi_VN',
         },
       });
     }
