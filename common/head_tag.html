@@ -12,6 +12,8 @@
     }
 
     function initializeCozeChat() {
+      const layout = window.innerWidth <= 600 ? 'mobile' : 'pc';
+
       new CozeWebSDK.WebChatClient({
         config: {
           bot_id: settings.coze_bot_id,
@@ -20,7 +22,7 @@
           title: settings.coze_bot_title,
           lang: 'vi_VN',
           icon: settings.coze_bot_icon,
-          layout: settings.coze_bot_layout,
+          layout: layout,
         },
       });
 
