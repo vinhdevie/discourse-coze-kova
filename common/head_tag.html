@@ -42,7 +42,14 @@
       observer.observe(document.body, { childList: true, subtree: true });
     }
 
-    loadLib(initializeCozeChat);
+    function isLoggedIn() {
+      // Check if the user is logged in
+      return !!Discourse.User.current();
+    }
+
+    if (isLoggedIn()) {
+      loadLib(initializeCozeChat);
+    }
   };
 
   startCozeAI();
