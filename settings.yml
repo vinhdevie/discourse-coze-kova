@@ -4,5 +4,5 @@ coze_bot_title:
   default: 'KOVA Innovative Assistant'
 coze_bot_icon:
   default: ''
-coze_bot_layout:
-  default: 'pc'
+#coze_bot_layout:
+#  default: 'pc'
