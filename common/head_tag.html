@@ -28,4 +28,18 @@
   };
 
   startCozeAI();
+
+  const observer = new MutationObserver((mutationsList, observer) => {
+    const imageElement = document.querySelector('img[alt="logo"]');
+    if (imageElement) {
+      const parentDiv = imageElement.closest('div');
+      if (parentDiv) {
+        parentDiv.style.height = '500px';
+        parentDiv.style.width = '500px';
+        observer.disconnect();
+      }
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
 </script>
