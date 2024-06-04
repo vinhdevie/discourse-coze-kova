@@ -22,6 +22,23 @@
           icon: settings.coze_bot_icon,
         },
       });
+
+      const observer = new MutationObserver((mutationsList, observer) => {
+        const imageElement = document.querySelector('img[alt="logo"]');
+
+        if (imageElement) {
+          const parentDiv = imageElement.closest('div');
+
+          if (parentDiv) {
+            parentDiv.style.height = '100px'; // Set the desired height
+            parentDiv.style.width = '100px'; // Set the desired width
+
+            observer.disconnect();
+          }
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
     }
 
     loadLib(initializeCozeChat);
